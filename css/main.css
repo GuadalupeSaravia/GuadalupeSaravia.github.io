@@ -4687,3 +4687,22 @@ input, select, textarea {
 		}
 
 	}
+
+		}
+
+	@media screen and (max-width: 980px) {
+
+		body.is-navPanel-visible #wrapper {
+			opacity: 0.5;
+		}
+
+		body.is-navPanel-visible #navPanel {
+			-moz-transform: translateX(0);
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0);
+			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
+			visibility: visible;
+		}
+
+	}
