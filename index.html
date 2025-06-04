@@ -56,27 +56,27 @@
       </nav>
       
 <!-- FORMULARIO -->
-    <section>
-      <form id="contact-form">
-        <div class="fields">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required />
+      <section>
+        <form id="contact-form">
+          <div class="fields">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="3" required></textarea>
+            </div>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="3" required></textarea>
-          </div>
-        </div>
-        <ul class="actions">
-          <li><input type="submit" value="Send Message" /></li>
-        </ul>
-      </form>
-    </section>
+          <ul class="actions">
+            <li><input type="submit" value="Send Message" /></li>
+          </ul>
+        </form>
+      </section>
 
 
 
@@ -114,7 +114,15 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- ==== Y aquí van los scripts en este orden EXACTO: ==== -->
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+      <!-- ==== Y aquí van los scripts en este orden EXACTO: ==== -->
     <script>
   (function() {
     // Cambia esta variable por tu dirección real de correo:
@@ -164,12 +172,5 @@
   })();
 </script>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.scrollex.min.js"></script>
-    <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/browser.min.js"></script>
-    <script src="js/breakpoints.min.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>
