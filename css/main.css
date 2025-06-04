@@ -4706,3 +4706,35 @@ input, select, textarea {
 		}
 
 	}
+
+
+/* --------------------------------------------
+   Reducir la altura vertical del footer-contacto
+   -------------------------------------------- */
+
+/* 1) Ajusta el padding de cada “sub-sección” 
+   (Address / Phone / Email / Social) */
+#footer .split.contact > section {
+  /* Antes: padding: 4rem 4rem 2rem 4rem; */
+  /* Ahora ponemos menos espacio arriba y abajo */
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+/* 2) (Opcional) Si quieres condensar aún más el bloque completo, 
+      puedes poner un max-height o height fijo y usar overflow si lo deseas */
+#footer .split.contact {
+  /* Descomenta/ajusta si quieres un alto fijo */
+  /* height: 200px; */
+  /* overflow: hidden; */
+}
+
+/* 3) (Opcional) Si quieres cambiar el color de fondo o línea divisoria, 
+      aquí podrías ajustar bordes o background */
+#footer .split.contact {
+  /* background-color: transparent;      Ejemplo: quita fondo gris */
+  /* border-top: none;                  Ejemplo: quita la línea superior */
+}
+
