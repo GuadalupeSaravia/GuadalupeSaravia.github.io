@@ -57,30 +57,27 @@
       
 <!-- FORMULARIO -->
     <section>
-  <form method="POST" action="https://formspree.io/f/mwpbpbqg">
-    <div class="fields">
-      <div class="field">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required />
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required />
-      </div>
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="3" required></textarea>
-      </div>
-    </div>
+      <form id="contact-form">
+        <div class="fields">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="3" required></textarea>
+          </div>
+        </div>
+        <ul class="actions">
+          <li><input type="submit" value="Send Message" /></li>
+        </ul>
+      </form>
+    </section>
 
-    <!-- Honeypot para evitar spam -->
-    <input type="text" name="_gotcha" style="display:none" />
-
-    <ul class="actions">
-      <li><input type="submit" value="Send Message" /></li>
-    </ul>
-  </form>
-</section>
 
 
         <section class="split contact">
@@ -118,6 +115,55 @@
     <!-- /#wrapper -->
 
     <!-- ==== Y aquí van los scripts en este orden EXACTO: ==== -->
+    <script>
+  (function() {
+    // Cambia esta variable por tu dirección real de correo:
+    var DESTINO_EMAIL = "tu_correo@ejemplo.com";
+
+    // Obtiene el formulario por su id
+    var form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita el envío “normal” del form
+
+      // Recopila valores de los campos
+      var nombre = document.getElementById("name").value.trim();
+      var correo = document.getElementById("email").value.trim();
+      var mensaje = document.getElementById("message").value.trim();
+
+      // Si alguno de los campos está vacío, no continuar
+      if (!nombre || !correo || !mensaje) {
+        // Con required en HTML, esto casi no ocurrirá,
+        // pero hacemos la comprobación adicional aquí:
+        alert("Por favor, completa todos los campos antes de enviar.");
+        return;
+      }
+
+      // Construye el asunto del correo:
+      // Por ejemplo: "Contacto desde sitio – Guadalupe Saravia"
+      var asunto = encodeURIComponent("Contacto desde sitio – " + nombre);
+
+      // Construye el cuerpo del mensaje. Puedes formatearlo como prefieras.
+      // Sujeto a límite de longitud de URL (~2000 caracteres en la mayoría de navegadores).
+      var cuerpo = "";
+      cuerpo += "Nombre: " + nombre + "%0D%0A";       // %0D%0A = salto de línea
+      cuerpo += "Email: " + correo + "%0D%0A%0D%0A";
+      cuerpo += "Mensaje:%0D%0A" + mensaje + "%0D%0A";
+
+      // Monta el enlace mailto:
+      var mailto_link = "mailto:" + DESTINO_EMAIL +
+                        "?subject=" + asunto +
+                        "&body=" + encodeURIComponent(cuerpo);
+
+      // Abre el cliente de correo:
+      window.location.href = mailto_link;
+
+      // Opcionalmente, puedes resetear el formulario:
+      form.reset();
+    });
+  })();
+</script>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.scrollex.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
