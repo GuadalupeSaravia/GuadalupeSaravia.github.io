@@ -56,47 +56,32 @@
       </nav>
       
 <!-- FORMULARIO -->
-      <!-- Main -->
-      <div id="main">
-        <!-- Aquí iría tu contenido de “posts”, “featured”, etc., tal como en el demo. -->
-        <!-- Por ejemplo, podrías copiar el bloque que ya trae el tema Massively. -->
-        <!-- … bloque “Featured Post” … -->
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <!-- Este es el footer de ejemplo del tema Massively. Puedes dejarlo así o eliminarlo. -->
-        <section>
+    <section>
   <form method="POST" action="https://formspree.io/f/mwpbpbqg">
     <div class="fields">
       <div class="field">
         <label for="name">Name</label>
-        <!-- name="name" debe coincidir con el campo que espera Formspree -->
         <input type="text" name="name" id="name" required />
       </div>
       <div class="field">
         <label for="email">Email</label>
-        <!-- name="email" es el campo que Formspree utilizará para el remitente -->
         <input type="email" name="email" id="email" required />
       </div>
       <div class="field">
         <label for="message">Message</label>
-        <!-- name="message" contendrá el cuerpo del mensaje -->
         <textarea name="message" id="message" rows="3" required></textarea>
       </div>
     </div>
 
-    <!-- Honeypot para evitar spam: campo oculto que debe quedar vacío -->
+    <!-- Honeypot para evitar spam -->
     <input type="text" name="_gotcha" style="display:none" />
-
-    <!-- Si quieres redirigir a “gracias.html” tras el envío, descomenta esta línea y crea gracias.html -->
-    <!-- <input type="hidden" name="_next" value="https://guadalupesaravia.github.io/gracias.html" /> -->
 
     <ul class="actions">
       <li><input type="submit" value="Send Message" /></li>
     </ul>
   </form>
 </section>
+
 
         <section class="split contact">
           <section class="alt">
