@@ -44,10 +44,23 @@
 			<div id="main">
 
 				<!-- Bloque de botones de idioma (Español / English) -->
-				<div id="language-switcher" style="text-align: right; margin: 1rem 0;">
-					<a href="#" id="btn-es" class="button small disabled">Español</a>
-					<a href="#" id="btn-en" class="button small disabled">English</a>
-				</div>
+				<!-- Bloque de enlaces para traducir la página -->
+<div id="language-switcher" style="text-align: right; margin: 1rem 0;">
+  <!-- Enlace que simplemente recarga la versión original en Español -->
+  <a href="generic.html" class="button small">Español</a>
+
+  <!-- Enlace que apunta a Google Translate para ver la versión en Inglés.
+       `location.href` se encarga de tomar la URL actual, pero como en GitHub Pages
+       siempre será `https://guadalupesaravia.github.io/generic.html`,
+       la ponemos explícita. -->
+  <a
+    href="https://translate.google.com/translate?sl=es&tl=en&u=https://guadalupesaravia.github.io/generic.html"
+    class="button small"
+    target="_blank"
+    rel="noopener"
+  >English</a>
+</div>
+
 
 				<!-- Post -->
 				<section class="post">
