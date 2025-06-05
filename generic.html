@@ -44,17 +44,7 @@
       <!-- Main -->
       <div id="main">
 
-        <!-- ─── BLOQUE DE BOTONES ESPAÑOL / ENGLISH ─────────────────────────────── -->
-        <!-- 
-          Aquí ponemos dos botones. Cuando el widget de Google Translate termine de cargar,
-          habrá un <select class="goog-te-combo"> que nosotros vamos a “simular” seleccionar.
-        -->
-        <div id="language-switcher" style="text-align: right; margin: 1rem 0;">
-          <button id="btn-es" class="button small">Español</button>
-          <button id="btn-en" class="button small">English</button>
-        </div>
-
-        <!-- Contenido principal de tu “Currículum” -->
+        <!-- Aquí va todo el cuerpo de tu página “Currículum”, exactamente como lo tenías -->
         <section class="post">
           <header class="major">
             <h2>Sobre mí</h2>
@@ -175,7 +165,6 @@
 
     </div><!-- /#wrapper -->
 
-
     <!-- ─── Scripts originales de Massively (no modificar el orden) ──────────── -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.scrollex.min.js"></script>
@@ -184,68 +173,6 @@
     <script src="js/breakpoints.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
-
-    <!-- ─── Bloque de Google Translate ─────────────────────────────────────── -->
-    <!-- 1) Contenedor oculto donde Google parseará el selector de idiomas -->
-    <div id="google_translate_element" style="display: none;"></div>
-
-    <!-- 2) Script oficial de Google Translate que inyecta el <select class="goog-te-combo"> -->
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: 'es',              // Idioma original de tu página (español)
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          },
-          'google_translate_element'
-        );
-      }
-    </script>
-    <script
-      type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-    </script>
-
-    <!-- 3) JavaScript para “esperar” al <select> y simular el cambio de idioma -->
-    <script>
-      /**
-       * Cada 100ms, buscamos si ya existe un <select class="goog-te-combo">.
-       * Cuando lo encontremos, ya podremos hacer el “change” para cambiar el idioma.
-       */
-      function waitForTranslateCombo(callback) {
-        var checkExist = setInterval(function() {
-          var combo = document.querySelector('.goog-te-combo');
-          if (combo) {
-            clearInterval(checkExist);
-            callback(combo);
-          }
-        }, 100);
-      }
-
-      document.addEventListener('DOMContentLoaded', function() {
-        // Buscamos el <select> apenas cargue el DOM
-        waitForTranslateCombo(function(combo) {
-          // Ya tenemos el <select class="goog-te-combo">
-          // Le quitamos el atributo "title" y algún estilo inline que impida hacer click, por si acaso
-          combo.removeAttribute('title');
-          combo.style.display = 'inline-block';
-
-          // Ahora enlazamos nuestros botones “Español” y “English”
-          document.getElementById('btn-es').addEventListener('click', function(e) {
-            e.preventDefault();
-            // Fijamos “es” en el select y disparamos el evento change
-            combo.value = 'es';
-            combo.dispatchEvent(new Event('change'));
-          });
-          document.getElementById('btn-en').addEventListener('click', function(e) {
-            e.preventDefault();
-            // Fijamos “en” en el select y disparamos el evento change
-            combo.value = 'en';
-            combo.dispatchEvent(new Event('change'));
-          });
-        });
-      });
-    </script>
     <!-- ─────────────────────────────────────────────────────────────────────── -->
   </body>
 </html>
