@@ -39,6 +39,12 @@
 							<li><a href="https://wa.me/+5493512849046" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
 							<li><a href="https://maps.app.goo.gl/bDvqa95eoVunsTVg7" class="icon solid fa-map-marker-alt"><span class="label">Map</span></a></li>
 						</ul>
+						<!-- Por ejemplo, justo después de tu <nav> -->
+							<div id="language-switcher" style="text-align: right; margin: 1rem;">
+							  <button id="btn-es" class="lang-btn">Español</button>
+							  <button id="btn-en" class="lang-btn">English</button>
+							</div>
+
 					</nav>
 
 				<!-- Main -->
@@ -133,6 +139,58 @@
 			<script src="js/breakpoints.min.js"></script>
 			<script src="js/util.js"></script>
 			<script src="js/main.js"></script>
+
+		<!-- 1) Div donde Google cargará su widget oculto -->
+			<div id="google_translate_element" style="display: none;"></div>
+
+			<!-- 2) Script oficial de Google Translate -->
+			<script type="text/javascript">
+			  function googleTranslateElementInit() {
+			    new google.translate.TranslateElement(
+			      {
+			        pageLanguage: 'es',           // Idioma original de tu sitio (español)
+			        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+			      },
+			      'google_translate_element'
+			    );
+			  }
+			</script>
+			<script
+			  type="text/javascript"
+			  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+			</script>
+
+			<script>
+			  // Estas dos funciones simulan el cambio en el elemento <select> de Google Translate
+			  function changeLangTo(lang) {
+			    // "lang" debe ser el código de idioma: 'es' o 'en'
+			    var iframe = document.querySelector('iframe.goog-te-menu-frame');
+			    if (!iframe) {
+			      console.warn('Google Translate iframe aún no cargado.');
+			      return;
+			    }
+			    // Abre el menú de idiomas
+			    iframe.contentWindow.document.querySelectorAll('.goog-te-menu2-item span.text').forEach(function(span) {
+			      if (span.innerText.toLowerCase().indexOf(lang) > -1) {
+			        span.click();
+			      }
+			    });
+			  }
+
+			  document.addEventListener('DOMContentLoaded', function() {
+			    // Botón “Español”
+			    document.getElementById('btn-es').addEventListener('click', function(e) {
+			      e.preventDefault();
+ 			     // Forzamos a que Google Translate vuelva a cargar en "es"
+			      changeLangTo('español');     // Google Translate busca la palabra “Español”
+			    });
+			    // Botón “English”
+ 			   document.getElementById('btn-en').addEventListener('click', function(e) {
+			      e.preventDefault();
+			      changeLangTo('english');     // Google Translate busca “English”
+			    });
+			  });
+			</script>
 
 
 	</body>
