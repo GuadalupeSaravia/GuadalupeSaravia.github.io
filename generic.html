@@ -27,29 +27,25 @@
         <ul class="icons">
           <li><a href="https://www.linkedin.com/in/guadalupe-regina-saravia-weht-227024285/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
           <li><a href="https://github.com/GuadalupeSaravia" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=guadasaraviaweht@gmail.com"
-                 target="_blank"
-                 class="icon solid fa-envelope"><span class="label">Gmail</span></a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=guadasaraviaweht@gmail.com" target="_blank" class="icon solid fa-envelope"><span class="label">Gmail</span></a></li>
           <li><a href="https://wa.me/+5493512849046" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
           <li><a href="https://maps.app.goo.gl/bDvqa95eoVunsTVg7" class="icon solid fa-map-marker-alt"><span class="label">Map</span></a></li>
         </ul>
       </nav>
 
       <!-- =========================
-           1) Insertamos AQUÍ los botones
+           1) Aquí movemos los botones DEBAJO de #nav, dentro de #main
            ========================= -->
-      <div id="language-switcher" style="text-align: right; margin: 1rem;">
-        <button id="btn-es" class="lang-btn">Español</button>
-        <button id="btn-en" class="lang-btn">English</button>
-      </div>
-      <!-- =========================
-           Fin de los cambios para los botones
-           ========================= -->
-
-
-      <!-- Main -->
       <div id="main">
-        <!-- Por ejemplo, justo después de tu <nav> -->
+
+        <!-- Aquí, justo debajo de la barra de navegación, insertamos un contenedor para los botones -->
+        <div id="language-switcher" style="text-align: right; margin: 1rem 0;">
+          <!-- Usamos las clases de “.button” que ya trae el tema para que se vean en blanco sobre el fondo oscuro -->
+          <a href="#" id="btn-es" class="button small">Español</a>
+          <a href="#" id="btn-en" class="button small">English</a>
+        </div>
+
+        <!-- El resto de tu contenido (sección “Sobre mí”, etc.) se mantiene intacto -->
         <section class="post">
           <header class="major">
             <h2>Sobre mí</h2>
@@ -58,51 +54,12 @@
           <div class="image main"><img src="images/pic01.jpg" alt="" /></div>
           <p>Soy analista de datos recientemente formada, con experiencia previa en tareas administrativas donde desarrollé habilidades clave como el manejo de información, elaboración de reportes y control de stock.</p>
           <p>Finalicé mi formación en análisis de datos con foco en Excel avanzado, Power BI, Tableau y fundamentos de SQL, y actualmente estoy esperando la nota final de mi proyecto integrador. Me entusiasma aplicar lo aprendido en un entorno profesional, seguir desarrollándome en Business Intelligence y aportar valor con una mirada analítica, organizada y orientada a resultados.</p>
-
-          <header class="major">
-            <h2>Experiencia laboral</h2>
-            <p>Secretaria administrativa | Purity Tecno Estética</p>
-          </header>
-          <div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-          <blockquote>En mi rol dentro de Purity, estuve a cargo de múltiples tareas administrativas y operativas que me permitieron desarrollar sólidas habilidades en el manejo y análisis de datos. Una de mis principales responsabilidades fue la elaboración de balances mensuales, donde registraba y analizaba ingresos, egresos y saldos, lo que me brindó una visión clara de la salud financiera de la empresa y me permitió detectar patrones, prever necesidades y optimizar recursos. También gestioné las órdenes de compra nacionales e internacionales, realizaba los pagos a proveedores, me encargaba de los cobros con tarjeta y link de pago, realizaba controles de stock y logística de recibo y entrega de equipos, tareas que requerían una constante actualización y análisis de información para mantener niveles óptimos de inventario y asegurar el cumplimiento de obligaciones financieras. Gracias al uso constante de herramientas como Microsoft Excel, desarrollé fluidez en funciones como filtros avanzados, tablas dinámicas, fórmulas condicionales y validación de datos, lo que facilitó la automatización de procesos y una toma de decisiones más ágil y precisa. Mi experiencia en Purity me permitió aplicar principios fundamentales del análisis de datos en un entorno real, desarrollando una mirada crítica y orientada a la mejora continua de los procesos administrativos.</blockquote>
-
-          <header class="major">
-            <h2>Estudios</h2>
-            <p>Carrera de análisis de datos en Coderhouse</p>
-          </header>
-          <div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-          <p>Completé la carrera de Análisis de Datos en Coderhouse, una formación práctica y orientada al desarrollo de habilidades técnicas aplicadas al entorno laboral. A lo largo del programa cursé distintas etapas que me permitieron dominar herramientas clave para la gestión, visualización y análisis de datos.</p>
-          <ul>
-            <li>En la etapa de <b>Power BI</b>, aprendí a conectar fuentes de datos, modelar información y construir paneles interactivos y visuales, aplicando conceptos de Business Intelligence para la toma de decisiones.</li>
-            <p><em>12/11/2024 - 10/12/2024 | Finalizado - Nota final: 7</em></p>
-            <li>En el curso de <b>Excel</b> para Análisis de Datos, profundicé en el uso de funciones avanzadas, manejo de grandes volúmenes de datos, validaciones, gráficos y tablas dinámicas, optimizando procesos y reportes.</li>
-            <p><em>20/01/2025 - 07/04/2025 | Finalizado - Nota final: 9</em></p>
-            <li>En <b>Tableau</b>, desarrollé dashboards dinámicos y visualmente efectivos, incorporando principios de diseño y storytelling con datos.</li>
-            <p><em>14/01/2025 - 18/03/2025 | Finalizado - Nota final: 10</em></p>
-            <li>Finalmente, en el curso de <b>Análisis de Datos</b>, adquirí conocimientos de SQL para la extracción y consulta de bases de datos, integrando esos resultados en Power BI para análisis más profundos.</li>
-            <p><em>18/03/2025 - 20/05/2025 | Finalizado - Nota final: 9</em></p>
-          </ul>
-          <p>Mi siguiente paso para continuar con mi formación es realizar la carrera de Ciencia de Datos, también de la mano de Coderhouse, y para el próximo año anotarme en la Licenciatura Superior en Ciencia de Datos e Inteligencia Artificial del ISPC.</p>
-
-          <header class="major">
-            <h2>Habilidades técnicas</h2>
-          </header>
-          <div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-          <ul>
-            <li>Microsoft Excel: Funciones avanzadas, tablas dinámicas, macros, validación de datos, gráficos, limpieza y análisis de datos.</li>
-            <li>Power BI: Modelado de datos, diseño de dashboards interactivos, DAX básico, conexión con múltiples fuentes.</li>
-            <li>SQL: Consultas básicas e intermedias, filtrado, ordenamiento, joins y extracción de datos para análisis.</li>
-            <li>Tableau: Visualización de datos, storytelling con dashboards, uso de filtros y parámetros.</li>
-            <li>Análisis de datos: Interpretación de métricas, visualización, generación de reportes e insights.</li>
-            <li>Gestión de datos administrativos: Control de ingresos/egresos, balances, control de stock y compras.</li>
-            <li>Herramientas de oficina: Google Sheets, Word, PowerPoint.</li>
-            <li>Organización y seguimiento de procesos: Manejo de información ordenada y uso de planillas para control operativo.</li>
-            <li>Canva: Diseño de presentaciones, visualizaciones, infografías y contenido gráfico para comunicar datos de forma clara y estética.</li>
-          </ul>
-
+          
+          <!-- … Aquí va el resto de tus encabezados, experiencias, estudios, etc. … -->
+          
         </section>
 
-      </div>
+      </div> <!-- /#main -->
 
       <!-- Footer -->
       <footer id="footer">
@@ -112,9 +69,7 @@
             <ul class="icons alt">
               <li><a href="https://www.linkedin.com/in/guadalupe-regina-saravia-weht-227024285/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
               <li><a href="https://github.com/GuadalupeSaravia" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-              <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=guadasaraviaweht@gmail.com"
-                     target="_blank"
-                     class="icon solid fa-envelope"><span class="label">Gmail</span></a></li>
+              <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=guadasaraviaweht@gmail.com" target="_blank" class="icon solid fa-envelope"><span class="label">Gmail</span></a></li>
               <li><a href="https://wa.me/+5493512849046" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
               <li><a href="https://maps.app.goo.gl/bDvqa95eoVunsTVg7" class="icon solid fa-map-marker-alt"><span class="label">Map</span></a></li>
             </ul>
@@ -124,14 +79,18 @@
 
       <!-- Copyright -->
       <div id="copyright">
-        <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        <ul>
+          <li>&copy; Untitled</li>
+          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
       </div>
 
     </div> <!-- /#wrapper -->
 
-    <!-- =========================
-         2) Google Translate oculto
-         ========================= -->
+
+    <!-- ================
+         2) Widget oculto de Google Translate (no hace falta moverlo)
+         ================ -->
     <div id="google_translate_element" style="display: none;"></div>
     <script>
       function googleTranslateElementInit() {
@@ -146,71 +105,59 @@
     </script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- =========================
-         3) Script mínimo para intercambiar idioma
-         ========================= -->
+    <!-- ================
+         3) Script mínimo para forzar el cambio de idioma
+         ================ -->
     <script>
-      // Aquí guardaremos la referencia al iframe que Google Translate inyecta
-      var translateIframe = null;
-
-      // Cada 300 ms comprobamos si ya apareció el iframe
+      // Esperamos a que Google Translate inyecte el iframe
+      var translateIframe;
       var checkIframeTimer = setInterval(function() {
         var iframe = document.querySelector('iframe.goog-te-menu-frame');
         if (iframe) {
           translateIframe = iframe;
           clearInterval(checkIframeTimer);
-          console.log('🟢 Google Translate iframe cargado.');
         }
       }, 300);
 
-      // Hacemos clic dentro del iframe sobre “Español” o “English”
-      function changeLangInIframe(desiredLangText) {
-        if (!translateIframe) return false;
+      // Busca dentro del iframe el texto que contenga “Español” o “English” y hace clic
+      function changeLangInIframe(langText) {
+        if (!translateIframe) return;
         var items = translateIframe.contentWindow.document.querySelectorAll(
           '.goog-te-menu2-item span.text'
         );
         for (var i = 0; i < items.length; i++) {
-          var span = items[i];
-          if (span.innerText.toLowerCase().indexOf(desiredLangText.toLowerCase()) !== -1) {
-            span.click();
-            return true;
+          if (
+            items[i].innerText.toLowerCase().indexOf(langText.toLowerCase()) !== -1
+          ) {
+            items[i].click();
+            break;
           }
         }
-        return false;
       }
 
-      // Cuando termine de cargar el DOM, asignamos los event listeners a los botones
       document.addEventListener('DOMContentLoaded', function() {
-        var btnEs = document.getElementById('btn-es'),
-            btnEn = document.getElementById('btn-en');
-
-        btnEs.addEventListener('click', function(e) {
+        document.getElementById('btn-es').addEventListener('click', function(e) {
           e.preventDefault();
           if (!translateIframe) {
-            alert('Por favor, espere un momento: el traductor aún no está listo.');
+            alert('Por favor espera un momento: el traductor aún no está listo.');
             return;
           }
-          if (!changeLangInIframe('Español')) {
-            console.warn('No se encontró “Español” en el menú de idiomas.');
-          }
+          changeLangInIframe('Español');
         });
-
-        btnEn.addEventListener('click', function(e) {
+        document.getElementById('btn-en').addEventListener('click', function(e) {
           e.preventDefault();
           if (!translateIframe) {
-            alert('Please wait a moment: translator is still loading.');
+            alert('Please wait: translator is still loading.');
             return;
           }
-          if (!changeLangInIframe('English')) {
-            console.warn('No se encontró “English” en el menú de idiomas.');
-          }
+          changeLangInIframe('English');
         });
       });
     </script>
 
-    <!-- =========================
-         4) Tus scripts originales (jQuery, main.js, etc.)
-         ========================= -->
+    <!-- ================
+         4) Scripts originales del tema (no los cambiamos)
+         ================ -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.scrollex.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
@@ -218,5 +165,6 @@
     <script src="js/breakpoints.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
+
   </body>
 </html>
